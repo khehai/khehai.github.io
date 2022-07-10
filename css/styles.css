@@ -77,10 +77,6 @@ body {
     text-transform: uppercase !important
 }
 
-.text-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
 
 .text-center {
     text-align: center !important
@@ -116,7 +112,8 @@ body {
 }
 
 .text-gray {
-    color: #aaa !important
+    color: #aaa !important;
+    font-weight: bold;      
 }
 
 .small {
@@ -1122,9 +1119,9 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     display: flex !important;
 }
 
-.d-block {
-    display: block !important;
-}
+.d-inline-block {
+    display: inline-block !important;
+} 
 
 .justify-content-between {
     justify-content: space-between !important;
@@ -1533,8 +1530,7 @@ a.button {
     }
 }
 
-.slider::before,
-.slider::after {
+.slider::before, .slider::after {
     background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
     content: '';
     height: 100%;
@@ -1600,12 +1596,11 @@ a.button {
     }
 }
 
-
 #slider {
     position: relative;
     text-align: center;
+    top: 10px;
     margin: 0 auto;
-    padding: 0;
 }
 
 #slides article {
@@ -1613,17 +1608,13 @@ a.button {
     float: left;
 }
 
-#slides .image {
+#slider .image {
     width: 500%;
     line-height: 0;
     margin: 0;
-    position: relative;    
+    position: relative;
+    animation: slider 30s infinite;
 }
-
-#slider .image {
-    animation: 30s slider infinite;
-    animation-delay: 2s;
-} 
 
 #owerflow {
     width: 100%;
@@ -1634,42 +1625,161 @@ article img {
     width: 100%;
 }
 
-article {
-    display: block;
-}
-
 #slides .image:hover {
     animation-play-state: paused;
 }
 
 .slide2 {
-    position: absolute;
-    top: 30%;
-    left: 0;
-}
-#slides .slide {
-    width: 20%;
-    float: left;
-    position: relative;
+   transform: translateY(-350px);  
 }
 
-.btn-primary {
+.btn-primary {    
     color: white;
     background-color: indigo;
     border-color: rgb(53, 2, 90);
-    border-radius: 4px;
-    transition: color 0.5s ease-in, background-color 0.5s ease-in-out. border-color 0.5s linear;
+    border-radius: 6px;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in-out, border-color 0.5s linear;
 }
 
-.rounded-1 {
-    border-radius: 0.2rem !important;
+.btn-primary:hover {
+    color: yellow;
 }
 
-.hero h2 {
-    padding-bottom: 2em;
-}
-
-.hero p {
+.slide2 p {
     padding-top: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 1em;   
 }
+
+.slide2 h2 {
+    padding-bottom: 2em;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.all {
+    height: 450px;
+}
+
+.text-muted1 {
+    color: #000;
+    letter-spacing: 0.1em;
+}
+
+.text-center-h {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center !important;
+}
+
+
+
+/* modal */
+.text-warning {
+    color: gold;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.bg-center {
+    background-position: center !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.bg-cover {
+    background-size: cover !important;
+
+}
+
+.bg-center {
+    background-position: center !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.4s;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+}
+
+.modal-dialog {
+    width: auto;
+    margin: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    background: rgb(241, 245, 244);
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.btn-close {
+    width: 1em;
+    height: 1em;
+    padding: .25em;
+    color: rgb(38, 35, 35);
+    border: 0;
+    border-radius: .25rem;
+    opacity: .5;
+}
+
+.btn-close:hover {
+    color: #000;
+    opacity: 1;
+}
+
+.btn-dark {
+    color: #ced4da;
+    background: black;
+    opacity: 0.65;
+    border-color: #999;
+    padding: 0.4em 0.7em;
+    font-size: 0.6rem;
+    align-items: center;
+    margin-left: 0.75rem;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+

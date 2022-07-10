@@ -107,7 +107,7 @@
                                         class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small
                                         class="text-gray fw-normal">(2)</small></a>
                             </li>
-                            <li class="nav-item"><a href="#!" class="nav-link"><i class="far fa-heart me-1"></i><small
+                            <li class="nav-item"><a href="wishlist.html" class="nav-link"><i class="far fa-heart me-1"></i><small
                                         class="text-gray fw-normal">(0)</small></a>
                             </li>
                             <li class="nav-item"><a href="login.html" class="nav-link"><i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a>                                      
@@ -121,51 +121,55 @@
 
         <!-- HERO SECTION-->
         <!-- container -->
-        <div class="container">        
-            <section class="hero pb-5 d-flex align-items-center"
-                style="background: url(https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/hero-banner-alt.3ea3fe2d.jpg)">
+        <div class="container"> 
             <div class="all">
                 <article id="slider">
                     <div id="slides">
                         <div id="owerflow">
                             <div class="image">
                                 <article><img src="images/slider/1.jpg"></article>
-                                <article><img src="images/slider/2.jpg">                                
+                                <article><img src="images/slider/2.jpg">
                                     <div class="row px-4 px-lg-5">
-                                        <div class="slide2 col-lg-5">
-                                            <p class="text-muted text-uppercase mb-2">New Inspiration 2022</p>
-                                            <h2 class="text-uppercase mb-3">20% off on new season</h1>
-                                            <a class="btn btn-primary rounded-1" href="shop.html">Browse collections</a>
+                                        <div class="slide2 col-lg-6">
+                                            <p class="text-muted1 text-uppercase mb-2">New Inspiration 2020</p>
+                                            <h2 class="text-uppercase mb-3">20% off on new season</h2>
+                                            <a class="btn btn-primary" href="shop.html">
+                                                <span>Browse collections</span>
+                                            </a>
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </article>
                                 <article><img src="images/slider/3.jpg"></article>
-                                <article><img src="images/slider/4.jpg"></article>
+                                <article><img src="images/slider/4.jpg">
+                                    <div class="row px-4 px-lg-5">
+                                        <div class="slide2 col-lg-6">
+                                            <p class="text-muted1 text-uppercase mb-2">New Inspiration 2020</p>
+                                            <h2 class="text-uppercase mb-3">20% off on new season</h2>
+                                            <a class="btn btn-primary" href="shop.html">
+                                                <span>Browse collections</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
                                 <article><img src="images/slider/5.jpg"></article>
                             </div>
                         </div>
-                    </div>               
+                    </div>         
+            
                 </article>
-             </div>
-                <!-- container -->
-                
-            </section>
+            </div>       
+           
+            
         </div>
 
+
+
     <div class="container">
-            <!-- CATEGORIES SECTION-->
-            <section class="pt-5">
-                <header>
-                    <p>Carefully created collections</p>
-                    <h2>Browse our categories</h2>
-                </header>
-
-            </section>
-
+            
 
             <!-- TRENDING PRODUCTS-->
             <section class="py-5">
-                <header>
+                <header class="text-center-h">
                     <p class="small text-muted small text-uppercase mb-1">Made the hard way</p>
                     <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
                 </header>
@@ -389,6 +393,70 @@
             integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     </div>
+
+
+
+<!-- Modal -->
+
+<div class="modal" id="productView">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <a href="#" class="p-4 btn-close"><i class="fas fa-times"></i> </a>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="bg-centr bg-cover d-block h-100" style="background: url(images/product-5.jpg);">
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
+                            </ul>
+                            <h2>Red watch</h2>
+                            <p class="text-muted">$123</p>
+                            <p class="text-sm mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+                                autem libero ullam sint alias blanditiis minus quis quaerat, ipsum doloremque animi
+                                officiis eum illo veritatis possimus accusamus quam commodi id.</p>
+
+                            <div class="row mb-4">
+                                <div class="col-sm-12">
+                                    <div class="border d-flex aling-items-center justify-content-between py-1 px-3">
+                                        <span class="small text-uppercase text-gray mr-4">Quantify</span>
+                                        <div class="quantity">
+                                            <button class="p-0"><i class="fas fa-caret-left"></i></button>
+                                            <input class="form-control" type="text" value="1">
+                                            <button class="p-0"><i class="fas fa-caret-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <a class="btn btn-dark btn-smd-flex aling-items-center w-100 justify-content-center px-0"
+                                        href="cart.html">Add to cart</a>
+                                    <a class="btn btn-dark btn-smd-flex aling-items-center w-100 justify-content-center px-0"
+                                        href="cart.html">Add to Wishlist</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
 
 </body>
 
