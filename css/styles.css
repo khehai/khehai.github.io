@@ -132,7 +132,7 @@ body {
 
 .text-white-1 {
     --bs-text-opacity: 1;
-    color: white !important;
+    color: white;
     text-align: center;
 }
 
@@ -712,6 +712,7 @@ h6, .h6 {
     transition: all 0.3s;
 }
 
+
 .reset-anchor:hover,
 .reset-anchor:focus {
     text-decoration: none;
@@ -1006,6 +1007,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     height: 48px;
 }
 
+
 .product img {
     width: 300px;
     height: 300px;
@@ -1057,13 +1059,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 .product .badge {
     position: absolute;
     top: 1rem;
-    left: 1rem;
-    z-index: 999;
+    right: 1.8rem;
+    z-index: 1;
 }
 
-.product-view {
-    min-height: 20rem;
-}
 
 .btn {
     display: inline-block;
@@ -1458,9 +1457,7 @@ a.button {
 
 /* Badge */
 .badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+    
     display: inline-block;
     font-size: .75rem;
     padding: 0.35rem 0.65rem;
@@ -1478,7 +1475,23 @@ a.button {
 }
 
 .bg-primary {
-    background-color: #dc3545 !important;
+    background-color: indigo !important;
+}
+
+.bg-new {
+    background-color: green !important;
+}
+
+.bg-sale {
+    background-color: red !important;
+}
+
+.bg-sold {
+    background-color: gold !important;
+}
+
+.product-view {
+    min-height: 20rem;
 }
 
 .form-check-label {
@@ -1755,7 +1768,7 @@ article img {
     opacity: 1;
 }
 
-.btn-dark {
+/* .btn-dark {
     color: #ced4da;
     background: black;
     opacity: 0.65;
@@ -1765,7 +1778,7 @@ article img {
     align-items: center;
     margin-top: 5px;
     margin-left: 0;
-}
+} */
 
 .modal-content {
     position: relative;
@@ -1780,5 +1793,29 @@ article img {
     position: relative;
     flex: 1 1 auto;
     padding: 1rem;
+}
+
+.category-item {
+   display: block;
+   position: relative;    
+}
+
+.category-item-img {
+    transition: all .3s;
+}
+
+.category-item-title {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: black;
+    background-color: white;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.075);
 }
 

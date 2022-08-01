@@ -81,10 +81,8 @@
                             class="fw-bold text-uppercase text-dark">Shopaholic</span></a>
                     <!-- navbar-toggler -->
 
-                    <button class="navbar-toggler navbar-toggler-end collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
+                    <a href="#!" class="navbar-toggler navbar-toggler-end collapsed" id="navbar-toggler"><span
+                            class="navbar-toggler-icon"></span></a>
 
                     <div class="navbar-collapse collapse">
                         <!-- navbar-nav -->
@@ -103,14 +101,14 @@
                         </ul>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="cart.html" class="nav-link"><i
-                                        class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small
-                                        class="text-gray fw-normal">(2)</small></a>
+                                <a href="cart.html" class="nav-link"><i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small
+                                        class="text-gray fw-normal">(<span id="shopping-cart-value">0</span>)</small></a>
                             </li>
                             <li class="nav-item"><a href="wishlist.html" class="nav-link"><i class="far fa-heart me-1"></i><small
-                                        class="text-gray fw-normal">(0)</small></a>
+                                        class="text-gray fw-normal">(<span id="wish-list-value">0</span>)</small></a>
                             </li>
-                            <li class="nav-item"><a href="login.html" class="nav-link"><i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a>                                      
+                            <li class="nav-item"><a href="login.html" class="nav-link"><i
+                                        class="fas fa-user me-1 text-gray fw-normal"></i>Login</a>
                             </li>
                         </ul>
                     </div>
@@ -174,109 +172,12 @@
                     <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
                 </div>
                 <!-- row -->
-                <div class="row">
-                    <!-- PRODUCT-->
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="product text-center">
-                            <div class="position-relative mb-3">
-                                <!-- badge -->
-                                <div></div>
-                                <a href="detail.html" class="d-block">
-                                    <img src="images/product-4.jpg" alt="Henry Backpack" class="img-fluid w-100">
-                                </a>
-                                <!-- product-overlay -->
-                                <div class="product-overlay">
-                                    <ul class="mb-0 list-inline">
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#!"><i class="far fa-heart"></i></a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="cart.html">Add to cart</a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#productView"><i class="fas fa-expand"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h6> <a href="detail.html" class="reset-anchor">An Wanch</a></h6>
-                            <p class="small text-muted">$300</p>
-                        </div>
+                
+                    <div class="row catalog">
+                    
                     </div>
-                    <!-- PRODUCT-->
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="product text-center">
-                            <div class="position-relative mb-3">
-                                <!-- badge -->
-                                <div></div>
-                                <a href="detail.html" class="d-block">
-                                    <img src="images/product-5.jpg" alt="Henry Backpack" class="img-fluid w-100">
-                                </a>
-                                <!-- product-overlay -->
-                                <div class="product-overlay">
-                                    <ul class="mb-0 list-inline">
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#!"><i class="far fa-heart"></i></a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="cart.html">Add to cart</a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#productView"><i class="fas fa-expand"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h6> <a href="detail.html" class="reset-anchor">Red Watch</a></h6>
-                            <p class="small text-muted">$190</p>
-                        </div>
-                    </div>
-                    <!-- PRODUCT-->
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="product text-center">
-                            <div class="position-relative mb-3">
-                                <!-- badge -->
-                                <div></div>
-                                <a href="detail.html" class="d-block">
-                                    <img src="images/product-9.jpg" alt="Henry Backpack" class="img-fluid w-100">
-                                </a>
-                                <!-- product-overlay -->
-                                <div class="product-overlay">
-                                    <ul class="mb-0 list-inline">
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i
-                                                    class="far fa-heart"></i></a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="cart.html">Add to
-                                                cart</a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#productView"><i
-                                                    class="fas fa-expand"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h6> <a href="detail.html" class="reset-anchor">Classic Watch</a></h6>
-                            <p class="small text-muted">$270</p>
-                        </div>
-                    </div>
-                    <!-- PRODUCT-->
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="product text-center">
-                            <div class="position-relative mb-3">
-                                <!-- badge -->
-                                <div></div>
-                                <a href="detail.html" class="d-block">
-                                    <img src="images/product-8.jpg" alt="Henry Backpack" class="img-fluid w-100">
-                                </a>
-                                <!-- product-overlay -->
-                                <div class="product-overlay">
-                                    <ul class="mb-0 list-inline">
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#!"><i class="far fa-heart"></i></a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="cart.html">Add to cart</a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#productView"><i class="fas fa-expand"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h6> <a href="detail.html" class="reset-anchor">Air Watch</a></h6>
-                            <p class="small text-muted">$150</p>
-                        </div>
-                    </div>
-                    <!-- PRODUCT-->
-                </div>
+               
+               
             </section>
 
             <!-- SERVICES-->
@@ -381,12 +282,7 @@
         </footer>
 
 
-        <!-- JavaScript files-->
-        <script type="text/javascript">
-            document.querySelector('.navbar-toggler').addEventListener('click', function () {
-                document.querySelector('.collapse').classList.toggle('show');
-            });
-        </script>
+       
         <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
@@ -397,65 +293,11 @@
 
 
 <!-- Modal -->
+<div class="modal-window"></div>
 
-<div class="modal" id="productView">
-
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <a href="#" class="p-4 btn-close"><i class="fas fa-times"></i> </a>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="bg-centr bg-cover d-block h-100" style="background: url(images/product-5.jpg);">
-
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-4">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
-                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
-                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
-                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
-                                <li class="list-inline-item"><i class="fas fa-star small text-warning"></i></li>
-                            </ul>
-                            <h2>Red watch</h2>
-                            <p class="text-muted">$123</p>
-                            <p class="text-sm mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-                                autem libero ullam sint alias blanditiis minus quis quaerat, ipsum doloremque animi
-                                officiis eum illo veritatis possimus accusamus quam commodi id.</p>
-
-                            <div class="row mb-4">
-                                <div class="col-sm-12">
-                                    <div class="border d-flex aling-items-center justify-content-between py-1 px-3">
-                                        <span class="small text-uppercase text-gray mr-4">Quantify</span>
-                                        <div class="quantity">
-                                            <button class="p-0"><i class="fas fa-caret-left"></i></button>
-                                            <input class="form-control" type="text" value="1">
-                                            <button class="p-0"><i class="fas fa-caret-right"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <a class="btn btn-dark btn-smd-flex aling-items-center w-100 justify-content-center px-0"
-                                        href="cart.html">Add to cart</a>
-                                    <a class="btn btn-dark btn-smd-flex aling-items-center w-100 justify-content-center px-0"
-                                        href="cart.html">Add to Wishlist</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-
-
+<!-- JavaScript files-->
+<script src="data.js"></script>
+<script src="main.js"></script>
 
 
 </body>
