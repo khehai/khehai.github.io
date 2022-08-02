@@ -1009,8 +1009,8 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 
 .product img {
-    width: 300px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
     object-fit: cover;
     filter: grayscale(40%);
     transition: all 0.3s;
@@ -1059,7 +1059,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 .product .badge {
     position: absolute;
     top: 1rem;
-    right: 1.8rem;
+    right: 1.3rem;
     z-index: 1;
 }
 

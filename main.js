@@ -1,4 +1,4 @@
-"use strict";
++"use strict";
 
 const navbarToggler = document.getElementById('navbar-toggler');
 const modalWindow = document.querySelector(".modal-window");
@@ -110,6 +110,8 @@ function setCartTotal(cart) {
 
 // Добавление товара в значок корзины например cart(2)
 
+
+
 function amountCartItems(cart) {
     if(cart)
     shoppingCartValue.textContent = cart.reduce((prev, cur) =>
@@ -120,6 +122,8 @@ function amountCartItems(cart) {
         shoppingCartValue.style = "color:red;";
     }   
 }
+
+
 
 // Функция для страницы вишлист????????????
 
@@ -349,27 +353,12 @@ function addToCartButton(cart) {
             let productId = event.target.closest('.btn-block').dataset.id;
             let price = event.target.closest('.btn-block').dataset.price;
 
-            addProductToCart({id: productId, price:price});
-
-            
+            addProductToCart({id: productId, price:price});           
            
         });
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    cart = Store.init('basket');
-    console.log(cart);
-    wishlist = Store.init('wishlist');
-
-    amountCartItems(cart);
-    amountWishListItems(wishlist);
-    
-
-    navbarToggler.addEventListener('click', function(){
-        document.querySelector('.collapse').classList.toggle('show');
-    });
 
 
     // Категории в динамике и фильтр
@@ -440,7 +429,7 @@ function renderCategory(selector, products){
 
 
 // Добавить категории в карусель
-    const carouselItemTemolate = data => `<div class="slide carousel-item">
+const carouselItemTemolate = data => `<div class="slide carousel-item">
 <a class="category-item" href="#!" data-category="${data.name}">
 <img src="images/product-${data.id}.jpg" alt="" />
 <strong class="category-item category-item-title" data-category="${data.name}">${data.name}</strong>
@@ -455,12 +444,28 @@ function makeCarousel(items) {
 }
 
 
-if (document.querySelector(".carousel")) {
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    navbarToggler.addEventListener('click', function(){
+        document.querySelector('.collapse').classList.toggle('show');
+    });
+
+    cart = Store.init('basket');
+    wishlist = Store.init('wishlist');
+
+    amountCartItems(cart);
+    amountWishListItems(wishlist);
+
+    if (document.querySelector(".carousel")) {
     let distingCategoryItems = distinctCategories(products);
     makeCarousel(distingCategoryItems);
     renderCategory('.carousel-item', products);
 
 }
+    
+
 
     // Пишем чекбоксы в странице шоп
 
@@ -505,13 +510,7 @@ if (document.querySelector(".carousel")) {
 
             })
         })
-    }
-
-    
-    // console.log('products', products);
-    if (showCase) {
-        // сортировка от низкой цены к высокой  тд
-        const selectPicker = document.querySelector('.selectpicker');
+         const selectPicker = document.querySelector('.selectpicker');
         const sortingOrders = [
             {k: "default", v: "Default Sorting"},
             {k: "popularity", v: "Popularity Product"},
@@ -551,13 +550,24 @@ if (document.querySelector(".carousel")) {
                          ('id', 'asc')));
                     
             }
+        addToCartButton(cart);
+        detailButton(products);
+        addToWishListButton();
             
             
         })
+
+    }
+
+    
+    // console.log('products', products);
+     if (showCase) {
+        // сортировка от низкой цены к высокой  тд
+         showCase.innerHTML = populateProductList(products);
+         
+       
             
              
-        showCase.innerHTML = populateProductList(products);
-
         addToCartButton(cart);
         detailButton(products);
         addToWishListButton();
