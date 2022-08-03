@@ -431,7 +431,7 @@ function renderCategory(selector, products){
 // Добавить категории в карусель
 const carouselItemTemolate = data => `<div class="slide carousel-item">
 <a class="category-item" href="#!" data-category="${data.name}">
-<img src="images/product-${data.id}.jpg" alt="" />
+<img src="https://khehai.github.io/images/product-${data.id}.jpg" alt="" />
 <strong class="category-item category-item-title" data-category="${data.name}">${data.name}</strong>
 </a>
 </div>`;
@@ -444,17 +444,43 @@ function makeCarousel(items) {
 }
 
 
+let currentProducts = [];
+const filteredCurrentProducts = (value) => {
+    currentProducts = products.filter(product => product.badge.title.includes(value));
+    return currentProducts;
+}
 
+
+
+function fetchProducts(url) {
+    return fetch(url, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'}
+    })
+        .then(response => {
+            if (response.status >= 400) {
+                return response.json().then(err => {
+                    const error = new Error('Somethin went wrong')
+                    error.data = MediaError
+                    throw error
+            })
+         }
+            return response.json();
+    })
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
     navbarToggler.addEventListener('click', function(){
         document.querySelector('.collapse').classList.toggle('show');
     });
 
+    fetchProducts('https://my-json-server.typicode.com/khehai/db/products')
+    .then(products => {
+    console.log(products)
     cart = Store.init('basket');
     wishlist = Store.init('wishlist');
-
     amountCartItems(cart);
     amountWishListItems(wishlist);
 
@@ -462,10 +488,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let distingCategoryItems = distinctCategories(products);
     makeCarousel(distingCategoryItems);
     renderCategory('.carousel-item', products);
-
-}
+    }
     
-
+    
+    currentProducts = products;
 
     // Пишем чекбоксы в странице шоп
 
@@ -477,7 +503,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // console.log([...new Set(badges)])
 
         let badges = [...new Set([...products.map(item => item.badge.title)].filter(
-        (item => item != '')))];
+            (item => item != '')))];
         // console.log(badges)
 
         showOnly.innerHTML = badges.map(item => `  <div class="form-check mb-1">
@@ -495,22 +521,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     values.push(item.value)
                     console.log(values);
                     showCase.innerHTML = values.map(value => populateProductList
-                    (products.filter(product => product.badge.title.includes(value)))).
-                    join("");
+                        (filteredCurrentProducts(value))).
+                        join("");
                 } else {
                     if (values.length != 0) {
-                        values.pop(item.value)  
+                        // values.pop(item.value)
+                        let index = values.indexOf(item.value);
+                        if (index !== -1) {
+                            values.splice(index, 1);
+                        }
                         showCase.innerHTML = values.map(value => populateProductList
-                        (products.filter(product => product.badge.title.includes(value)))).
-                        join("");
-                    }  
-                }                                    
-                    if (values.length == 0)
-                        showCase.innerHTML = populateProductList(products);         
+                            (filteredCurrentProducts(value))).
+                            join("");
+                    }
+                }
+                if (values.length == 0) {
+                    currentProducts = products;
+                    showCase.innerHTML = populateProductList(products);
+                }
 
             })
         })
-         const selectPicker = document.querySelector('.selectpicker');
+    // } ?????????????
+
+        const selectPicker = document.querySelector('.selectpicker');
         const sortingOrders = [
             {k: "default", v: "Default Sorting"},
             {k: "popularity", v: "Popularity Product"},
@@ -534,19 +568,19 @@ document.addEventListener("DOMContentLoaded", () => {
         selectPicker.addEventListener('change', function () {
             switch (this.value) {
                 case 'low-high':
-                    showCase.innerHTML = populateProductList(products.sort(compare
+                    showCase.innerHTML = populateProductList(currentProducts.sort(compare
                         ('price', 'asc')));
                     break;
                 case 'high-low':
-                    showCase.innerHTML = populateProductList(products.sort(compare
+                    showCase.innerHTML = populateProductList(currentProducts.sort(compare
                         ('price', 'desc')));
                     break;
                 case 'popularity':
-                    showCase.innerHTML = populateProductList(products.sort(compare
+                    showCase.innerHTML = populateProductList(currentProducts.sort(compare
                         ('stars', 'desc')));
                     break;
                 default:
-                     showCase.innerHTML = populateProductList(products.sort(compare
+                     showCase.innerHTML = populateProductList(currentProducts.sort(compare
                          ('id', 'asc')));
                     
             }
@@ -583,6 +617,8 @@ document.addEventListener("DOMContentLoaded", () => {
         shoppingCartItems.innerHTML = populateShoppingCart();
         setCartTotal(cart);
         renderCart();
-    }
+        }
+        
+   });  //fetch     
 
 });

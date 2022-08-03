@@ -4,7 +4,7 @@ let products = [
             title: "",
             bg: "",
         },
-        image: "images/product-1.jpg",
+        image: "https://khehai.github.io/images/product-1.jpg",
         title: "Henry Backpack",
         price: 250,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -21,7 +21,7 @@ let products = [
             title: "",
             bg: "",
         },
-        image: "images/product-8.jpg",
+        image: "https://khehai.github.io/images/product-8.jpg",
         title: "Air Watch",
         price: 150,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -34,12 +34,12 @@ let products = [
     },
 
 
-  {
+    {
         badge: {
             title: "Sale",
             bg: "sale",
         },
-        image: "images/product-2.jpg",
+        image: "https://khehai.github.io/images/product-2.jpg",
         title: "Air Pads",
         price: 102,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -52,12 +52,12 @@ let products = [
     },
   
   
- {
+    {
         badge: {
             title: "Sale",
             bg: "sale",
         },
-        image: "images/product-3.jpg",
+        image: "https://khehai.github.io/images/product-3.jpg",
         title: "T-shirt",
         price: 120,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -71,12 +71,12 @@ let products = [
  
 
 
-{
+    {  
         badge: {
             title: "New",
             bg: "new",
         },
-        image: "images/product-10.jpg",
+        image: "https://khehai.github.io/images/product-10.jpg",
         title: "Polaroid one step camera",
         price: 351,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -94,7 +94,7 @@ let products = [
             title: "",
             bg: "",
         },
-        image: "images/product-9.jpg",
+        image: "https://khehai.github.io/images/product-9.jpg",
         title: "Classic Watch",
         price: 270,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -107,12 +107,12 @@ let products = [
     },
      
 
- {
+    {
         badge: {
             title: "New",
             bg: "new",
         },
-        image: "images/product-5.jpg",
+        image: "https://khehai.github.io/images/product-5.jpg",
         title: "Cool Parphume",
         price: 120,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -124,14 +124,13 @@ let products = [
         }
     },
 
-   
-       
+          
     {   
     badge: {
         title: "Sold",
         bg: "sold",
     },
-    image: "images/product-6.jpg",
+    image: "https://khehai.github.io/images/product-6.jpg",
     title: "Nike SHoes",
     price: 90.99,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -149,7 +148,7 @@ let products = [
         title: "",
         bg: "",
     },
-    image: "images/product-7.jpg",
+    image: "https://khehai.github.io/images/product-7.jpg",
     title: "Red Watch",
     price: 99.99,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
@@ -159,9 +158,7 @@ let products = [
         id: 4,
         name: "Watches"
     }
-    },  
-
-    
+    },    
  
      
 ];
